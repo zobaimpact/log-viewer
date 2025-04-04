@@ -17,8 +17,8 @@ export default function LogTable({ logs, onLogClick }: LogTableProps) {
         <thead>
           <tr>
             <th>Timestamp</th>
-            <th>Level</th>
             <th>Message</th>
+            <th>Status</th>
             <th>Trace</th>
           </tr>
         </thead>

@@ -1,0 +1,105 @@
+@use '../../styles/variables' as *;
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: $spacing-md;
+}
+
+.modalContent {
+  background-color: white;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: $spacing-xl;
+  position: relative;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.closeButton {
+  position: absolute;
+  top: $spacing-md;
+  right: $spacing-md;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #374151;
+  }
+}
+
+.modalTitle {
+  margin-bottom: $spacing-lg;
+  color: #111827;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.logDetails {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.detailRow {
+  display: flex;
+  gap: $spacing-md;
+
+  @media (max-width: $breakpoint-sm) {
+    flex-direction: column;
+    gap: $spacing-xs;
+  }
+}
+
+.detailLabel {
+  font-weight: 500;
+  color: #4b5563;
+  min-width: 100px;
+}
+
+.levelValue {
+  padding: $spacing-xs $spacing-sm;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+
+  &.error {
+    background-color: rgba($error-color, 0.1);
+    color: $error-color;
+  }
+
+  &.warn {
+    background-color: rgba($warning-color, 0.1);
+    color: $warning-color;
+  }
+
+  &.info {
+    background-color: rgba($info-color, 0.1);
+    color: $info-color;
+  }
+
+  &.debug {
+    background-color: rgba($debug-color, 0.1);
+    color: $debug-color;
+  }
+
+  &.trace {
+    background-color: rgba($trace-color, 0.1);
+    color: $trace-color;
+  }
+}

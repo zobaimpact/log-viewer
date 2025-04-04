@@ -1,0 +1,50 @@
+@use './variables' as *;
+
+.container {
+  min-height: 100vh;
+  padding: $spacing-xl;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.loadingContainer, .errorContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 18px;
+}
+
+.errorContainer {
+  color: $error-color;
+}
+
+.header {
+  margin-bottom: $spacing-xl;
+  text-align: center;
+
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: $spacing-sm;
+  }
+
+  p {
+    color: #6b7280;
+    font-size: 16px;
+  }
+}
+
+.main {
+  background-color: white;
+  border-radius: 12px;
+  padding: $spacing-xl;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.logCount {
+  margin-bottom: $spacing-md;
+  color: #6b7280;
+  font-size: 14px;
+}

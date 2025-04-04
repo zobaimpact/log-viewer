@@ -6,4 +6,4 @@ export interface LogEntry {
   authorId: string;
 }
 
-export type LogLevel = "ALL" | "ERROR" | "WARN" | "DEBUG" | "TRACE" | "INFO";
+export type LogLevel = "ALL" | "Error" | "Warn" | "Debug" | "Trace" | "Info";

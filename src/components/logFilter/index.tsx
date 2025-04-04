@@ -19,7 +19,7 @@ export default function LogFilter({
       <div className={styles.searchInput}>
         <input
           type="text"
-          placeholder="Search logs..."
+          placeholder="Search logs by status: Debug"
           value={searchTerm}
           onChange={(e) => onSearchChange(e.target.value)}
         />
@@ -29,12 +29,12 @@ export default function LogFilter({
           value={selectedLevel}
           onChange={(e) => onLevelChange(e.target.value as LogLevel)}
         >
-          <option value="ALL">All Levels</option>
-          <option value="ERROR">Error</option>
-          <option value="WARN">Warning</option>
-          <option value="INFO">Info</option>
-          <option value="DEBUG">Debug</option>
-          <option value="TRACE">Trace</option>
+          <option value="ALL">All</option>
+          <option value="Error">Error</option>
+          <option value="Warn">Warning</option>
+          <option value="Info">Info</option>
+          <option value="Debug">Debug</option>
+          <option value="Trace">Trace</option>
         </select>
       </div>
     </div>
